@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wireframe de Fresura Bogotá, emprendimiento de fresas con crema personalizables con diferentes toppings.">
+    <title>Fresura Bogotá | Fresas con crema personalizables</title>
+</head>
+<body>
+
+    <!--ENCABEZADO Y NAVEGACIÓN PRINCIPAL-->
+    <header>
+        <h1>Fresura Bogotá</h1>
+        <p>Fresas con crema a tu gusto, con toppings para personalizar cada antojo.</p>
+
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos y toppings</a></li>
+                <li><a href="#personaliza">Personaliza tu pedido</a></li>
+                <li><a href="#opiniones">Opiniones</a></li>
+                <li><a href="#preguntas">Preguntas frecuentes</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- PRESENTACIÓN DEL NEGOCIO -->
+        <section id="inicio">
+            <h2>Fresas hechas a tu manera</h2>
+            <p>
+                En Fresura puedes personalizar tus fresas con crema eligiendo el tamaño
+                y los toppings que más te gusten. La idea es ofrecer una experiencia sencilla,
+                clara y cercana, para que conozcas el producto antes de hacer tu pedido.
+            </p>
+            <p>
+                Los pedidos se confirman directamente por WhatsApp. En esta primera versión
+                del sitio no se realizan pagos en línea.
+            </p>
+            <p>
+                También puedes elegir recoger tu pedido en la tienda o consultar disponibilidad
+                de domicilio en zonas cercanas, aproximadamente entre 3 y 5 km alrededor del punto de venta.
+            </p>
+
+            <!-- Reemplazar el número cuando el negocio confirme el WhatsApp oficial -->
+            <p>
+                <a href="https://wa.me/57XXXXXXXXXX">Continuar pedido por WhatsApp</a>
+            </p>
+        </section>
+
+        <!-- PRODUCTOS Y TOPPINGS DISPONIBLES
+             Los nombres y precios son ejemplos de wireframe.
+             Deben actualizarse con el menú oficial de Fresura.-->
+        <section id="productos">
+            <h2>Productos y toppings</h2>
+            <p>
+                Fresura maneja diferentes combinaciones personalizables. A continuación se muestra
+                una estructura de ejemplo para organizar el menú de forma transparente y fácil de actualizar.
+            </p>
+
+            <h3>Tamaños de fresas con crema</h3>
+            <table>
+                <caption>Tamaños disponibles - valores de ejemplo</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Tamaño</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col">Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Personal</td>
+                        <td>Porción individual de fresas con crema</td>
+                        <td>Por confirmar</td>
+                    </tr>
+                    <tr>
+                        <td>Mediano</td>
+                        <td>Más fresas y espacio para combinar varios toppings</td>
+                        <td>Por confirmar</td>
+                    </tr>
+                    <tr>
+                        <td>Grande</td>
+                        <td>Ideal para compartir o crear una combinación más completa</td>
+                        <td>Por confirmar</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Toppings de ejemplo</h3>
+            <ul>
+                <li>Chocolate</li>
+                <li>Leche condensada</li>
+                <li>Arequipe</li>
+                <li>Chispas de chocolate</li>
+                <li>Galleta triturada</li>
+                <li>Brownie</li>
+                <li>Marshmallows</li>
+                <li>Barquillo</li>
+                <li>Maní</li>
+                <li>Cereal</li>
+            </ul>
+
+            <p>
+                <strong>Importante:</strong> la disponibilidad, precios, promociones y descuentos
+                deben confirmarse por WhatsApp antes de finalizar el pedido.
+            </p>
+        </section>
+
+        <!-- FORMULARIO BÁSICO DE PERSONALIZACIÓN DEL PEDIDO
+             Este formulario es un wireframe: sin JavaScript ni backend
+             todavía no envía automáticamente los datos a WhatsApp.-->
+        <section id="personaliza">
+            <h2>Personaliza tu pedido</h2>
+            <p>Cuéntanos cómo quieres tus fresas. Después podrás confirmar disponibilidad y precio por WhatsApp.</p>
+
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>1. Elige el tamaño</legend>
+
+                    <label for="tamano">Tamaño</label>
+                    <select id="tamano" name="tamano" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="personal">Personal</option>
+                        <option value="mediano">Mediano</option>
+                        <option value="grande">Grande</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>2. Elige tus toppings</legend>
+
+                    <input type="checkbox" id="chocolate" name="toppings" value="chocolate">
+                    <label for="chocolate">Chocolate</label>
+
+                    <input type="checkbox" id="leche-condensada" name="toppings" value="leche-condensada">
+                    <label for="leche-condensada">Leche condensada</label>
+
+                    <input type="checkbox" id="arequipe" name="toppings" value="arequipe">
+                    <label for="arequipe">Arequipe</label>
+
+                    <input type="checkbox" id="galleta" name="toppings" value="galleta">
+                    <label for="galleta">Galleta triturada</label>
+
+                    <input type="checkbox" id="brownie" name="toppings" value="brownie">
+                    <label for="brownie">Brownie</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>3. Entrega del pedido</legend>
+
+                    <label for="entrega">¿Cómo quieres recibirlo?</label>
+                    <select id="entrega" name="entrega" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="recoger">Recoger en la tienda</option>
+                        <option value="domicilio">Consultar domicilio</option>
+                    </select>
+
+                    <label for="zona">Barrio o zona</label>
+                    <input type="text" id="zona" name="zona" placeholder="Ejemplo: nombre del barrio">
+                </fieldset>
+
+                <fieldset>
+                    <legend>4. Observaciones</legend>
+
+                    <label for="observaciones">Indicaciones especiales</label>
+                    <textarea id="observaciones" name="observaciones" rows="5" cols="40" placeholder="Ejemplo: sin maní, topping aparte, mensaje para regalo..."></textarea>
+                </fieldset>
+
+                <fieldset>
+                    <legend>5. Datos de contacto</legend>
+
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required>
+
+                    <label for="telefono">Número de WhatsApp</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+
+                    <label for="correo">Correo electrónico (opcional)</label>
+                    <input type="email" id="correo" name="correo">
+
+                    <input type="checkbox" id="autorizacion" name="autorizacion" required>
+                    <label for="autorizacion">
+                        Autorizo el uso de mis datos únicamente para gestionar este pedido y contactarme sobre el mismo.
+                    </label>
+                </fieldset>
+
+                <p>
+                    Este formulario no procesa pagos. El valor final, disponibilidad y entrega se confirman con Fresura.
+                </p>
+
+                <button type="submit">Enviar solicitud de pedido</button>
+            </form>
+        </section>
+
+        <!--OPINIONES DE CLIENTES
+             Sección solicitada por el dueño para generar confianza. -->
+        <section id="opiniones">
+            <h2>Lo que dicen nuestros clientes</h2>
+
+            <article>
+                <h3>Cliente 1</h3>
+                <p>“Me gustó poder escoger los toppings y armar la combinación a mi gusto.”</p>
+                <p>Calificación de ejemplo: 5 de 5</p>
+            </article>
+
+            <article>
+                <h3>Cliente 2</h3>
+                <p>“El pedido fue fácil de confirmar y las fresas llegaron muy bien presentadas.”</p>
+                <p>Calificación de ejemplo: 5 de 5</p>
+            </article>
+        </section>
+
+        <!--PREGUNTAS FRECUENTES
+             El dueño manifestó interés en resolver dudas generales. -->
+        <section id="preguntas">
+            <h2>Preguntas frecuentes</h2>
+
+            <details>
+                <summary>¿Puedo pagar desde la página?</summary>
+                <p>No. En esta primera versión el pago no se realiza en el sitio web. El pedido se confirma directamente con Fresura.</p>
+            </details>
+
+            <details>
+                <summary>¿Hacen domicilios?</summary>
+                <p>Sí, según disponibilidad y cobertura. La referencia inicial es una zona aproximada de 3 a 5 km alrededor de la tienda.</p>
+            </details>
+
+            <details>
+                <summary>¿Puedo recoger mi pedido?</summary>
+                <p>Sí. Puedes seleccionar la opción de recoger en la tienda al momento de solicitar tu pedido.</p>
+            </details>
+
+            <details>
+                <summary>¿Puedo escoger varios toppings?</summary>
+                <p>Sí. La personalización es una de las características principales de Fresura. Algunas combinaciones pueden tener un costo adicional.</p>
+            </details>
+        </section>
+
+        <!-- INFORMACIÓN DE CONTACTO
+             Reemplazar datos pendientes por los oficiales del negocio. -->
+        <section id="contacto">
+            <h2>Contacto</h2>
+
+            <address>
+                <p><strong>Fresura Bogotá</strong></p>
+                <p>Dirección: por confirmar</p>
+                <p>WhatsApp: por confirmar</p>
+                <p>Horario de atención: por confirmar</p>
+            </address>
+
+            <p>
+                <a href="https://wa.me/57XXXXXXXXXX">Escribir por WhatsApp</a>
+            </p>
+
+            <!-- Agregar aquí el enlace oficial cuando Dylan confirme la ubicación del negocio -->
+            <p>
+                <a href="#">Ver ubicación en el mapa</a>
+            </p>
+
+            <!-- Red social prioritaria mencionada en la entrevista -->
+            <p>
+                <a href="#">Ver Fresura en TikTok</a>
+            </p>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>&copy; 2026 Fresura Bogotá. Todos los derechos reservados.</p>
+        <p>Sitio web informativo. Los pedidos y pagos se confirman directamente con el negocio.</p>
+    </footer>
+
+</body>
+</html>
