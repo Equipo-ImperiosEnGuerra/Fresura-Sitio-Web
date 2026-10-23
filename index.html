@@ -3,9 +3,19 @@
 <head> <!--INFORMACIÓN QUE NECESITA LA PAǴINA PERO NO SE VE-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="description" content="Wireframe de Fresura Bogotá, emprendimiento de fresas con crema personalizables con diferentes toppings.">
     <title>Fresura Bogotá | Fresas con crema personalizables</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- Estilos de Leaflet para mostrar mapas interactivos -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""
+    >
+
 </head>
 <body> <!--TODO LO QUE EL USUARIO VE EN PANTALLA-->
 
@@ -275,7 +285,17 @@
         <p>Sitio web informativo. Los pedidos y pagos se confirman directamente con el negocio.</p>
     </footer>
 
-    <script src="script.js">   </script>
+   
+    <!-- Biblioteca de mapas Leaflet -->
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""
+    ></script>
+
+    <!-- Nuestro código JavaScript -->
+    <script src="script.js"></script>
+
 
 </body>
 </html>

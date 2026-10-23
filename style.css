@@ -1,118 +1,220 @@
-/* Estilos generales y tipografía */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fff5f7; /* Un tono rosado muy suave */
-    color: #333333;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
+
+/* ==========================================
+   FRESURA - HOJA DE ESTILOS
+   ========================================== */
+
+/* 1. VARIABLES DE COLORES */
+
+:root {
+    --rosa-principal: #e83e68;
+    --rosa-oscuro: #bb2850;
+    --rosa-claro: #ffe8ee;
+    --rosa-fondo: #fff6f8;
+    --crema: #fffaf3;
+    --chocolate: #593a3c;
+    --texto: #383034;
+    --texto-suave: #706468;
+    --blanco: #ffffff;
+    --borde: #f1d8df;
 }
 
-/* Encabezado */
+/* 2. CONFIGURACIÓN GENERAL */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+
+    background-color: var(--rosa-fondo);
+    color: var(--texto);
+}
+
+/* 3. ENCABEZADO */
+
 header {
-    background: linear-gradient(135deg, #ff4b6e, #ff758c);
-    color: white;
+    background: linear-gradient(
+        135deg,
+        var(--rosa-oscuro),
+        var(--rosa-principal)
+    );
+
+    color: var(--blanco);
     text-align: center;
-    padding: 2.5rem 1rem;
+
+    padding: 45px 20px;
 }
 
 header h1 {
-    margin: 0 0 0.5rem 0;
-    font-size: 2.5rem;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    margin: 0;
 }
 
 header p {
-    margin: 0 0 1.5rem 0;
+    color: var(--blanco);
     font-size: 1.1rem;
-    opacity: 0.9;
+    margin: 10px 0 25px;
 }
 
-/* Menú de navegación */
+/* 4. MENÚ DE NAVEGACIÓN */
+
 nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 15px;
+    justify-content: center;
+
+    list-style: none;
+    gap: 12px;
+
+    margin: 0;
+    padding: 0;
 }
 
 nav a {
-    color: white;
+    display: inline-block;
+
+    padding: 10px 16px;
+
+    color: var(--blanco);
     text-decoration: none;
-    font-weight: 600;
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 6px 14px;
-    border-radius: 20px;
-    transition: background 0.3s;
+    font-weight: bold;
+
+    border-radius: 25px;
+
+    background-color: rgba(255, 255, 255, 0.15);
+
+    transition: 0.3s;
 }
 
 nav a:hover {
-    background-color: white;
-    color: #ff4b6e;
+    background-color: var(--blanco);
+    color: var(--rosa-oscuro);
 }
 
-/* Contenido principal */
+/* 5. CONTENIDO PRINCIPAL */
+
 main {
-    max-width: 800px;
-    margin: 2rem auto;
+    max-width: 1100px;
+    margin: 35px auto;
     padding: 0 20px;
 }
 
+/* 6. SECCIONES COMO TARJETAS */
+
 section {
-    background: white;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    background-color: var(--blanco);
+
+    padding: 35px;
+    margin-bottom: 30px;
+
+    border-radius: 18px;
+    border: 1px solid var(--borde);
+
+    box-shadow: 0 8px 25px rgba(80, 30, 45, 0.06);
 }
 
 h2 {
-    color: #d63348;
-    border-bottom: 2px solid #ffe3e6;
-    padding-bottom: 0.5rem;
+    color: var(--rosa-oscuro);
+    font-size: 1.8rem;
     margin-top: 0;
 }
 
-/* Tablas */
+h3 {
+    color: var(--chocolate);
+}
+
+p {
+    color: var(--texto-suave);
+}
+
+/* 7. SECCIÓN DE INICIO */
+
+#inicio {
+    background: linear-gradient(
+        135deg,
+        var(--blanco),
+        var(--crema)
+    );
+
+    border-left: 5px solid var(--rosa-principal);
+}
+
+/* 8. PRODUCTOS Y TOPPINGS */
+
+#productos > ul {
+    display: flex;
+    flex-wrap: wrap;
+
+    list-style: none;
+
+    padding: 0;
+    gap: 10px;
+}
+
+#productos > ul li {
+    background-color: var(--rosa-claro);
+    color: var(--rosa-oscuro);
+
+    padding: 8px 15px;
+    border-radius: 25px;
+
+    font-weight: 600;
+}
+
+/* 9. TABLAS */
+
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 1rem 0;
+    margin: 20px 0;
 }
 
-th, td {
-    padding: 12px;
+th,
+td {
+    padding: 14px;
+    border-bottom: 1px solid var(--borde);
     text-align: left;
-    border-bottom: 1px solid #eee;
 }
 
 th {
-    background-color: #fff0f3;
-    color: #d63348;
+    background-color: var(--rosa-claro);
+    color: var(--rosa-oscuro);
 }
 
-/* Formularios */
+tbody tr:hover {
+    background-color: var(--rosa-fondo);
+}
+
+/* 10. FORMULARIO */
+
 fieldset {
-    border: 1px solid #ffd1d6;
-    border-radius: 8px;
-    padding: 1.2rem;
-    margin-bottom: 1.2rem;
-    background-color: #fffbfc;
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+
+    background-color: #fffdfd;
+
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
 legend {
     font-weight: bold;
-    color: #d63348;
-    padding: 0 5px;
+    color: var(--rosa-oscuro);
 }
 
 label {
     display: block;
-    margin-top: 0.8rem;
-    margin-bottom: 0.3rem;
-    font-weight: 500;
+    margin: 12px 0 5px;
+    font-weight: 600;
 }
 
 input[type="text"],
@@ -121,53 +223,351 @@ input[type="email"],
 select,
 textarea {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    box-sizing: border-box;
-    font-family: inherit;
+    padding: 12px;
+
+    border: 1px solid #d9c9cd;
+    border-radius: 8px;
+
+    font: inherit;
+    background-color: var(--blanco);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--rosa-principal);
+    outline-offset: 2px;
+}
+
+textarea {
+    resize: vertical;
 }
 
 input[type="checkbox"] {
-    margin-right: 8px;
+    accent-color: var(--rosa-principal);
+}
+
+input[type="checkbox"] + label {
+    display: inline-block;
+    margin-right: 12px;
+}
+
+/* 11. BOTONES GENERALES */
+
+button {
+    font-family: inherit;
+}
+
+button[type="submit"],
+.boton-tienda {
+    background-color: var(--rosa-principal);
+    color: var(--blanco);
+
+    padding: 13px 20px;
+
+    border: none;
+    border-radius: 10px;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 button[type="submit"] {
-    background-color: #ff4b6e;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 8px;
-    cursor: pointer;
     width: 100%;
-    transition: background 0.3s;
 }
 
-button[type="submit"]:hover {
-    background-color: #d63348;
+button[type="submit"]:hover,
+.boton-tienda:hover {
+    background-color: var(--rosa-oscuro);
 }
 
-/* Detalles (Preguntas frecuentes) */
+.boton-tienda:focus-visible,
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--chocolate);
+    outline-offset: 3px;
+}
+
+/* 12. BOTONES DE WHATSAPP */
+
+a[href*="wa.me"] {
+    display: inline-block;
+
+    background-color: var(--rosa-principal);
+    color: var(--blanco);
+
+    padding: 12px 20px;
+    border-radius: 10px;
+
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a[href*="wa.me"]:hover {
+    background-color: var(--rosa-oscuro);
+}
+
+/* 13. OPINIONES */
+
+#opiniones article {
+    display: inline-block;
+    vertical-align: top;
+
+    width: calc(50% - 15px);
+
+    background-color: var(--crema);
+
+    border-radius: 12px;
+    padding: 20px;
+    margin: 5px;
+}
+
+/* 14. PREGUNTAS FRECUENTES */
+
 details {
-    background: #fff0f3;
-    padding: 10px 15px;
-    margin-bottom: 10px;
-    border-radius: 6px;
-    cursor: pointer;
+    background-color: var(--rosa-fondo);
+
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+
+    padding: 15px;
+    margin-bottom: 12px;
 }
 
 summary {
+    color: var(--rosa-oscuro);
     font-weight: bold;
-    color: #d63348;
+    cursor: pointer;
 }
 
-/* Pie de página */
-footer {
-    text-align: center;
-    padding: 2rem;
-    color: #666;
+/* ==========================================
+   15. SECCIÓN NUEVA: TIENDAS Y MAPA
+   ========================================== */
+
+.ubicaciones-fresura {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.ubicaciones-fresura h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+/* Contenedor que organiza las tiendas y el mapa */
+
+.ubicaciones-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1.6fr;
+
+    gap: 20px;
+    margin-top: 20px;
+
+    align-items: stretch;
+}
+
+/* Lista de tiendas */
+
+.tiendas-lista {
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+/* Tarjeta de cada sede */
+
+.tienda-card {
+    background-color: var(--crema);
+
+    padding: 20px;
+
+    border: 1px solid var(--borde);
+    border-radius: 14px;
+}
+
+.tienda-card h4 {
+    margin: 0 0 8px;
+    color: var(--rosa-oscuro);
+    font-size: 1.15rem;
+}
+
+.tienda-card p {
+    margin: 0 0 15px;
+}
+
+/* Botones de cada sede */
+
+.tienda-acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.boton-tienda,
+.enlace-ruta {
+    display: inline-block;
+
+    padding: 10px 14px;
+
     font-size: 0.9rem;
-    background-color: #ffe3e6;
+    text-align: center;
+    text-decoration: none;
+}
+
+.enlace-ruta {
+    color: var(--rosa-oscuro);
+    background-color: var(--blanco);
+
+    border: 1px solid var(--rosa-principal);
+    border-radius: 10px;
+
+    font-weight: bold;
+}
+
+.enlace-ruta:hover {
+    background-color: var(--rosa-claro);
+}
+
+/* 16. MAPA INTERACTIVO */
+
+#mapa-tiendas {
+    width: 100%;
+
+    height: 420px;
+    min-height: 350px;
+
+    border-radius: 14px;
+
+    border: 1px solid var(--borde);
+
+    z-index: 0;
+}
+
+/* Mensaje debajo del mapa */
+
+#estado-mapa {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+/* Ventanas emergentes de Leaflet */
+
+.popup-tienda {
+    min-width: 160px;
+}
+
+.popup-tienda strong {
+    color: var(--rosa-oscuro);
+}
+
+.popup-tienda a {
+    color: var(--rosa-oscuro);
+    font-weight: bold;
+}
+
+/* 17. INFORMACIÓN DE CONTACTO */
+
+address {
+    font-style: normal;
+
+    padding: 20px;
+
+    background-color: var(--rosa-fondo);
+
+    border-left: 4px solid var(--rosa-principal);
+    border-radius: 8px;
+}
+
+/* 18. PIE DE PÁGINA */
+
+footer {
+    background-color: var(--rosa-claro);
+
+    padding: 30px 20px;
+
+    text-align: center;
+    color: var(--texto-suave);
+}
+
+/* ==========================================
+   19. DISEÑO RESPONSIVE
+   ========================================== */
+
+@media (max-width: 768px) {
+
+    main {
+        padding: 0 12px;
+    }
+
+    section {
+        padding: 22px;
+    }
+
+    /* Tarjetas y mapa pasan a una columna */
+
+    .ubicaciones-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Opiniones ocupan todo el ancho */
+
+    #opiniones article {
+        width: 100%;
+        margin: 8px 0;
+    }
+
+    #mapa-tiendas {
+        height: 350px;
+    }
+
+    /* Permite desplazar tablas anchas */
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    header {
+        padding: 30px 15px;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    nav a {
+        font-size: 0.85rem;
+        padding: 8px 12px;
+    }
+
+    .tienda-acciones {
+        flex-direction: column;
+    }
+
+    .tienda-acciones button,
+    .tienda-acciones a {
+        width: 100%;
+    }
+
+}
+
+/* Respeta usuarios que prefieren menos animación */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    * {
+        transition-duration: 0.01ms !important;
+    }
 }
