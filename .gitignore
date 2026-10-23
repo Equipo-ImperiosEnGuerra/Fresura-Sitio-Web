@@ -4,6 +4,17 @@
 *.pem
 *.key
 
+# Configuración local de agentes y documentación del proyecto
+AGENTS.md
+CLAUDE.md
+CLAUDE.local.md
+.claude/
+.agents/
+.opencode/
+opencode.json
+opencode.jsonc
+docs-proyecto/
+
 .DS_Store
 Thumbs.db
 .vscode/
